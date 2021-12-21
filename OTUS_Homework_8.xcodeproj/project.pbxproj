@@ -13,8 +13,6 @@
 		2B0A0B94276B2304003B0747 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B82276B2303003B0747 /* ContentView.swift */; };
 		2B0A0B95276B2304003B0747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0A0B83276B2304003B0747 /* Assets.xcassets */; };
 		2B0A0B96276B2304003B0747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0A0B83276B2304003B0747 /* Assets.xcassets */; };
-		2B6B773327719DBE00BB26B2 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B773227719DBE00BB26B2 /* OTUS_Homework_8App.swift */; };
-		2B6B773527719DBE00BB26B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B773427719DBE00BB26B2 /* ContentView.swift */; };
 		2B6B773727719DBF00BB26B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773627719DBF00BB26B2 /* Assets.xcassets */; };
 		2B6B773A27719DBF00BB26B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */; };
 		2B6B774427719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B6B774327719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -27,6 +25,8 @@
 		2B6B775C27719DF600BB26B2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B775B27719DF600BB26B2 /* ComplicationController.swift */; };
 		2B6B775E27719DF800BB26B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B775D27719DF800BB26B2 /* Assets.xcassets */; };
 		2B6B776127719DF800BB26B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B776027719DF800BB26B2 /* Preview Assets.xcassets */; };
+		2B6B776F27719E7000BB26B2 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */; };
+		2B6B777027719E7900BB26B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B82276B2303003B0747 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,9 +134,9 @@
 		2B0A0B7B276B2302003B0747 = {
 			isa = PBXGroup;
 			children = (
+				2B0A0B9F276B236C003B0747 /* README.md */,
 				2B0A0B80276B2303003B0747 /* Shared */,
 				2B0A0B8F276B2304003B0747 /* macOS */,
-				2B0A0B9F276B236C003B0747 /* README.md */,
 				2B6B773127719DBE00BB26B2 /* tvOS */,
 				2B6B774727719DF400BB26B2 /* watchOS */,
 				2B6B775227719DF600BB26B2 /* WatchKit_Extension */,
@@ -459,8 +459,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6B773527719DBE00BB26B2 /* ContentView.swift in Sources */,
-				2B6B773327719DBE00BB26B2 /* OTUS_Homework_8App.swift in Sources */,
+				2B6B777027719E7900BB26B2 /* ContentView.swift in Sources */,
+				2B6B776F27719E7000BB26B2 /* OTUS_Homework_8App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
