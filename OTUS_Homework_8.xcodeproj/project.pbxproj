@@ -27,6 +27,12 @@
 		2B6B776127719DF800BB26B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B776027719DF800BB26B2 /* Preview Assets.xcassets */; };
 		2B6B776F27719E7000BB26B2 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */; };
 		2B6B777027719E7900BB26B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B82276B2303003B0747 /* ContentView.swift */; };
+		2B6B77732771B64500BB26B2 /* MoviesApi in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6B77722771B64500BB26B2 /* MoviesApi */; };
+		2B6B77772771BAF500BB26B2 /* MoviesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B77762771BAF500BB26B2 /* MoviesVM.swift */; };
+		2B6B77782771BAF500BB26B2 /* MoviesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B77762771BAF500BB26B2 /* MoviesVM.swift */; };
+		2B6B77792771BAF500BB26B2 /* MoviesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B77762771BAF500BB26B2 /* MoviesVM.swift */; };
+		2B6B777C2771BB2C00BB26B2 /* MoviesApi in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6B777B2771BB2C00BB26B2 /* MoviesApi */; };
+		2B6B777E2771BB3900BB26B2 /* MoviesApi in Frameworks */ = {isa = PBXBuildFile; productRef = 2B6B777D2771BB3900BB26B2 /* MoviesApi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +103,7 @@
 		2B6B776027719DF800BB26B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B6B776227719DF800BB26B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B6B776327719DF800BB26B2 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2B6B77762771BAF500BB26B2 /* MoviesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6B77732771B64500BB26B2 /* MoviesApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6B777C2771BB2C00BB26B2 /* MoviesApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6B777E2771BB3900BB26B2 /* MoviesApi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,14 +151,16 @@
 				2B6B774727719DF400BB26B2 /* watchOS */,
 				2B6B775227719DF600BB26B2 /* WatchKit_Extension */,
 				2B0A0B89276B2304003B0747 /* Products */,
+				2B6B777A2771BB2C00BB26B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		2B0A0B80276B2303003B0747 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2B6B77752771BAA500BB26B2 /* UI */,
+				2B6B77742771BA9D00BB26B2 /* ViewModels */,
 				2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */,
-				2B0A0B82276B2303003B0747 /* ContentView.swift */,
 				2B0A0B83276B2304003B0747 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -226,6 +238,29 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2B6B77742771BA9D00BB26B2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2B6B77762771BAF500BB26B2 /* MoviesVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2B6B77752771BAA500BB26B2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2B0A0B82276B2303003B0747 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2B6B777A2771BB2C00BB26B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +277,9 @@
 			dependencies = (
 			);
 			name = "OTUS_Homework_8 (iOS)";
+			packageProductDependencies = (
+				2B6B77722771B64500BB26B2 /* MoviesApi */,
+			);
 			productName = "OTUS_Homework_8 (iOS)";
 			productReference = 2B0A0B88276B2304003B0747 /* OTUS_Homework_8.app */;
 			productType = "com.apple.product-type.application";
@@ -259,6 +297,9 @@
 			dependencies = (
 			);
 			name = "OTUS_Homework_8 (macOS)";
+			packageProductDependencies = (
+				2B6B777B2771BB2C00BB26B2 /* MoviesApi */,
+			);
 			productName = "OTUS_Homework_8 (macOS)";
 			productReference = 2B0A0B8E276B2304003B0747 /* OTUS_Homework_8.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +317,9 @@
 			dependencies = (
 			);
 			name = "OTUS_Homework_8 (tvOS)";
+			packageProductDependencies = (
+				2B6B777D2771BB3900BB26B2 /* MoviesApi */,
+			);
 			productName = OTUS_Homework_8;
 			productReference = 2B6B773027719DBE00BB26B2 /* OTUS_Homework_8 (tvOS).app */;
 			productType = "com.apple.product-type.application";
@@ -370,6 +414,9 @@
 				Base,
 			);
 			mainGroup = 2B0A0B7B276B2302003B0747;
+			packageReferences = (
+				2B6B77712771B64500BB26B2 /* XCRemoteSwiftPackageReference "OTUS_MoviesApi" */,
+			);
 			productRefGroup = 2B0A0B89276B2304003B0747 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -443,6 +490,7 @@
 			files = (
 				2B0A0B93276B2304003B0747 /* ContentView.swift in Sources */,
 				2B0A0B91276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
+				2B6B77772771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +500,7 @@
 			files = (
 				2B0A0B94276B2304003B0747 /* ContentView.swift in Sources */,
 				2B0A0B92276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
+				2B6B77782771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +510,7 @@
 			files = (
 				2B6B777027719E7900BB26B2 /* ContentView.swift in Sources */,
 				2B6B776F27719E7000BB26B2 /* OTUS_Homework_8App.swift in Sources */,
+				2B6B77792771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,7 +668,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -648,7 +698,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -727,7 +777,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OTUS_Homework_8/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"tvOS/Preview Content\"";
 				DEVELOPMENT_TEAM = R4G26CHU6B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -755,7 +805,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"OTUS_Homework_8/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"tvOS/Preview Content\"";
 				DEVELOPMENT_TEAM = R4G26CHU6B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -989,6 +1039,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2B6B77712771B64500BB26B2 /* XCRemoteSwiftPackageReference "OTUS_MoviesApi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vpogorelskiy/OTUS_MoviesApi";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B6B77722771B64500BB26B2 /* MoviesApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B6B77712771B64500BB26B2 /* XCRemoteSwiftPackageReference "OTUS_MoviesApi" */;
+			productName = MoviesApi;
+		};
+		2B6B777B2771BB2C00BB26B2 /* MoviesApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B6B77712771B64500BB26B2 /* XCRemoteSwiftPackageReference "OTUS_MoviesApi" */;
+			productName = MoviesApi;
+		};
+		2B6B777D2771BB3900BB26B2 /* MoviesApi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2B6B77712771B64500BB26B2 /* XCRemoteSwiftPackageReference "OTUS_MoviesApi" */;
+			productName = MoviesApi;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B0A0B7C276B2302003B0747 /* Project object */;
 }
