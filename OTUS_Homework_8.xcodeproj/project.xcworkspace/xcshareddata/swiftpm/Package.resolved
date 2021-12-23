@@ -2,11 +2,11 @@
   "object": {
     "pins": [
       {
-        "package": "MoviesApi",
-        "repositoryURL": "https://github.com/vpogorelskiy/OTUS_MoviesApi",
+        "package": "OTUS_Packages",
+        "repositoryURL": "https://github.com/vpogorelskiy/OTUS_Packages",
         "state": {
-          "branch": "main",
-          "revision": "55b8fb28c318eb7f2e4677d2afc5ef67ff5bb31c",
+          "branch": "master",
+          "revision": "9064ed55bb821ace2359fbbfbeeb8ffaf705b24e",
           "version": null
         }
       }

@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = MoviesViewModel()
+    
     var body: some View {
         TabView {
             Text("Favorites")
                 .tabItem{ Text("Favorites") }
-            Text("Browse")
-                .tabItem{ Text("Browse") }
+            List {
+                ForEach(viewModel.movies) { item in
+                    ZStack {
+                        if let urlString = item.imageUrl,
+                            let url = URL(string: urlString) {
+                            AsyncImage(url: url)
+                        }
+                        Text(item.title)
+                    }
+                }
+            }
+            .tabItem{ Text("Browse") }
             Text("Settings")
                 .tabItem{ Text("Settings") }
+        }.onAppear {
+            viewModel.getMovies()
         }
     }
 }
