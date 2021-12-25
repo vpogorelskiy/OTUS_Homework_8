@@ -12,22 +12,33 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            Text("Favorites")
-                .tabItem{ Text("Favorites") }
             List {
                 ForEach(viewModel.movies) { item in
-                    ZStack {
-                        if let urlString = item.imageUrl,
-                            let url = URL(string: urlString) {
-                            AsyncImage(url: url)
-                        }
+                    NavigationLink {
                         Text(item.title)
+                            .navigationTitle(item.title)
+                    } label: {
+                        HStack {
+                            if let urlString = item.imageUrl,
+                                let url = URL(string: urlString) {
+                                AsyncImage(url: url)
+                            }
+                            Text(item.title)
+                        }
                     }
                 }
             }
-            .tabItem{ Text("Browse") }
+            .tabItem{
+                Text("Browse")
+            }
+            Text("Favorites")
+                .tabItem{
+                    Text("Favorites")
+                }
             Text("Settings")
-                .tabItem{ Text("Settings") }
+                .tabItem{
+                    Text("Settings")
+                }
         }.onAppear {
             viewModel.getMovies()
         }
