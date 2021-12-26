@@ -35,6 +35,9 @@
 		2B956B2827723976000C47CD /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B956B2627723976000C47CD /* Encodable.swift */; };
 		2B956B2927723976000C47CD /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B956B2627723976000C47CD /* Encodable.swift */; };
 		2B956B2A27723976000C47CD /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B956B2627723976000C47CD /* Encodable.swift */; };
+		2BC774622778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
+		2BC774632778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
+		2BC774642778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,7 @@
 		2B956B2427723976000C47CD /* OTUS_Homework_8 (watchOS)-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTUS_Homework_8 (watchOS)-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B956B2527723976000C47CD /* OTUS_Homework_8 WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTUS_Homework_8 WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B956B2627723976000C47CD /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		2BC774612778B0B400E3C699 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				2B6B77762771BAF500BB26B2 /* MoviesVM.swift */,
+				2BC774612778B0B400E3C699 /* BaseVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -506,6 +511,7 @@
 				2B0A0B91276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77772771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B956B2727723976000C47CD /* Encodable.swift in Sources */,
+				2BC774622778B0B400E3C699 /* BaseVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +523,7 @@
 				2B0A0B92276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77782771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B956B2827723976000C47CD /* Encodable.swift in Sources */,
+				2BC774632778B0B400E3C699 /* BaseVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +535,7 @@
 				2B6B776F27719E7000BB26B2 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77792771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B956B2927723976000C47CD /* Encodable.swift in Sources */,
+				2BC774642778B0B400E3C699 /* BaseVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

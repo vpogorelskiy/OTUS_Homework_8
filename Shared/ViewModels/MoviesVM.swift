@@ -7,16 +7,8 @@
 
 import Foundation
 import MoviesApi
-import SwiftUI
 
-protocol MovieItem {
-    var title: String { get }
-    var imageUrl: String? { get }
-    var details: [String: String]? { get }
-}
-
-class MoviesViewModel: ObservableObject {
-    @Published var movies: [MoviesViewModel.Item] = []
+class MoviesViewModel: BaseViewModel {
     @Published var isUpdating: Bool = false
     
     private let moviesApi = MoviesAPI()
@@ -25,24 +17,25 @@ class MoviesViewModel: ObservableObject {
     
     func getMovies() {
         moviesApi.perform(query: "Fantasy", batchSize: batchSize, startIndex: 0) { [weak self] movies, error in
-            self?.movies.append(contentsOf: movies.map{ Item(movieShort: $0) })
+            self?.movies.append(contentsOf: movies.map{ ViewModelApiItem(movieShort: $0) })
         }
     }
     
-    func getNextIfNeeded(forItem item: MoviesViewModel.Item) {
+    func getNextIfNeeded(forItem item: BaseViewModelItem) {
         guard !isUpdating else { return }
         if movies.last === item {
             isUpdating = true
-            moviesApi.perform(query: "Cyberpunk", batchSize: batchSize, startIndex: lastBatchIndex + 1) { [weak self] movies, error in
+            moviesApi.perform(query: "Fantasy", batchSize: batchSize, startIndex: lastBatchIndex + 1) { [weak self] movies, error in
                 self?.lastBatchIndex += 1
                 self?.isUpdating = false
-                self?.movies.append(contentsOf: movies.map{ Item(movieShort: $0) })
+                self?.movies.append(contentsOf: movies.map{ ViewModelApiItem(movieShort: $0) })
             }
         }
     }
     
-    func getDetails(for item: MoviesViewModel.Item) {
-        moviesApi.getMovieDetails(for: item.movieShort) { movieFull, error in
+    func getDetails(for item: BaseViewModelItem) {
+        guard let vmItem = item as? ViewModelApiItem else { return }
+        moviesApi.getMovieDetails(for: vmItem.movieShort) { movieFull, error in
             let dict = try? movieFull?.asDictionary() ?? [:]
             item.details = (dict as? [String: String]) ?? [:]
         }
@@ -50,16 +43,14 @@ class MoviesViewModel: ObservableObject {
 }
 
 extension MoviesViewModel {
-    class Item: MovieItem, ObservableObject {
-        var title: String { return movieShort.title ?? ""}
-        var imageUrl: String? { return movieShort.poster }
-        let movieShort: MovieShort
-        var details: [String: String]?
+    class ViewModelApiItem: BaseViewModelItem  {
+        var movieShort: MovieShort
         
         init(movieShort: MovieShort) {
             self.movieShort = movieShort
+            super.init(title: movieShort.title ?? "",
+                       imageUrl: movieShort.poster,
+                       details: nil)
         }
     }
 }
-
-extension MoviesViewModel.Item: Identifiable {}
