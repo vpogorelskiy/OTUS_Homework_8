@@ -4,7 +4,8 @@ struct ContentView: View {
     var body: some View {
         TabView {
             MoviesView()
-                .environmentObject(MoviesViewModel()) // Move VM to factory class
+                .environmentObject(MoviesViewModel() as BaseViewModel) // Move VM to factory class
+                .navigationTitle("Fantasy movies")
                 .tabItem{
                     Text("Browse")
                 }

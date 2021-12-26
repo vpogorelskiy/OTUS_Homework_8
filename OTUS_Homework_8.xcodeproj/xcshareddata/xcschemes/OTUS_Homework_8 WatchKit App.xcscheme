@@ -54,8 +54,10 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/OTUS_Homework_8 WatchKit App">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B6B774227719DF400BB26B2"
@@ -63,7 +65,7 @@
             BlueprintName = "OTUS_Homework_8 WatchKit App"
             ReferencedContainer = "container:OTUS_Homework_8.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -71,8 +73,10 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/OTUS_Homework_8 WatchKit App">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2B6B774227719DF400BB26B2"
@@ -80,7 +84,16 @@
             BlueprintName = "OTUS_Homework_8 WatchKit App"
             ReferencedContainer = "container:OTUS_Homework_8.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "2B6B774227719DF400BB26B2"
+            BuildableName = "OTUS_Homework_8 WatchKit App.app"
+            BlueprintName = "OTUS_Homework_8 WatchKit App"
+            ReferencedContainer = "container:OTUS_Homework_8.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

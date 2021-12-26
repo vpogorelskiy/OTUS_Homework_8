@@ -5,18 +5,15 @@ struct MoviesView: View {
     @EnvironmentObject var viewModel: BaseViewModel
     
     var body: some View {
-        NavigationView {
-            List {
+        ScrollView(.horizontal) {
+            HStack(spacing: 20) {
                 ForEach(viewModel.items) { item in
                     MoviesCell(item: item)
-                        .onAppear {
-                            viewModel.getNextIfNeeded(forItem: item)
-                        }
                 }
             }
-            .onAppear {
-                viewModel.getMovies()
-            }
+        }
+        .onAppear {
+            viewModel.getMovies()
         }
     }
 }
