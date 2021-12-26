@@ -1,14 +1,11 @@
-//
-//  BaseVM.swift
-//  OTUS_Homework_8
-//
-//  Created by Вячеслав Погорельский on 26.12.2021.
-//
-
 import Foundation
 
 class BaseViewModel: ObservableObject {
-    @Published var movies: [BaseViewModelItem] = []
+    @Published var items: [BaseViewModelItem] = []
+    
+    func getMovies() {}
+    
+    func getNextIfNeeded(forItem item: BaseViewModelItem) {}
 }
 
 class BaseViewModelItem: ObservableObject, Identifiable {

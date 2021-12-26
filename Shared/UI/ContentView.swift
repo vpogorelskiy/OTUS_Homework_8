@@ -1,16 +1,10 @@
-//
-//  ContentView.swift
-//  Shared
-//
-//  Created by Вячеслав Погорельский on 16.12.2021.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         TabView {
-            MoviesView(viewModel: MoviesViewModel())
+            MoviesView()
+                .environmentObject(MoviesViewModel()) // Move VM to factory class
                 .tabItem{
                     Text("Browse")
                 }
@@ -29,5 +23,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(MockViewModel())
     }
 }
