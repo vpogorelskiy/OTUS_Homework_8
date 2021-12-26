@@ -38,6 +38,9 @@
 		2BC774622778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
 		2BC774632778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
 		2BC774642778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
+		2BC774672778D2DC00E3C699 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774662778D2DC00E3C699 /* MoviesView.swift */; };
+		2BC774682778D2DC00E3C699 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774662778D2DC00E3C699 /* MoviesView.swift */; };
+		2BC774692778D2DC00E3C699 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774662778D2DC00E3C699 /* MoviesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,7 @@
 		2B956B2527723976000C47CD /* OTUS_Homework_8 WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OTUS_Homework_8 WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		2B956B2627723976000C47CD /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		2BC774612778B0B400E3C699 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		2BC774662778D2DC00E3C699 /* MoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 		2B6B77752771BAA500BB26B2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2BC774652778D2C900E3C699 /* MoviesView */,
 				2B0A0B82276B2303003B0747 /* ContentView.swift */,
 			);
 			path = UI;
@@ -278,6 +283,14 @@
 				2B956B2627723976000C47CD /* Encodable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2BC774652778D2C900E3C699 /* MoviesView */ = {
+			isa = PBXGroup;
+			children = (
+				2BC774662778D2DC00E3C699 /* MoviesView.swift */,
+			);
+			path = MoviesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0A0B93276B2304003B0747 /* ContentView.swift in Sources */,
+				2BC774672778D2DC00E3C699 /* MoviesView.swift in Sources */,
 				2B0A0B91276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77772771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B956B2727723976000C47CD /* Encodable.swift in Sources */,
@@ -520,6 +534,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B0A0B94276B2304003B0747 /* ContentView.swift in Sources */,
+				2BC774682778D2DC00E3C699 /* MoviesView.swift in Sources */,
 				2B0A0B92276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77782771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B956B2827723976000C47CD /* Encodable.swift in Sources */,
@@ -532,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B6B777027719E7900BB26B2 /* ContentView.swift in Sources */,
+				2BC774692778D2DC00E3C699 /* MoviesView.swift in Sources */,
 				2B6B776F27719E7000BB26B2 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77792771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B956B2927723976000C47CD /* Encodable.swift in Sources */,
