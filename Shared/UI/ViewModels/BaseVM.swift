@@ -11,11 +11,15 @@ class BaseViewModel: ObservableObject {
 class BaseViewModelItem: ObservableObject, Identifiable {
     var title: String
     var imageUrl: String?
-    var isFavorite: Bool {
+    @Published var isFavorite: Bool {
         didSet { favoriteChangeHandler?(isFavorite) }
     }
     private let favoriteChangeHandler: ((Bool) -> Void)?
-    @Published var details: [String: String]?
+    @Published var details: [String: String]? {
+        didSet {
+            print("\(Self.self).\(#function): \(details)")
+        }
+    }
     
     init(title: String, imageUrl: String?, details: [String: String]?, isFavorite: Bool = false, favoriteChangeHandler: ((Bool) -> Void)? = nil) {
         self.title = title

@@ -2,21 +2,26 @@ import Foundation
 import SwiftUI
 
 struct MoviesView: View {
-    @EnvironmentObject var viewModel: BaseViewModel
+    @EnvironmentObject var viewModel: MoviesViewModel
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.items) { item in
+        List {
+            ForEach(viewModel.items) { item in
+                NavigationLink {
+                    MovieDetailsView(movie: item)
+                        .onAppear {
+                            viewModel.getDetails(for: item)
+                        }
+                } label: {
                     MoviesCell(item: item)
                         .onAppear {
                             viewModel.getNextIfNeeded(forItem: item)
                         }
                 }
             }
-            .onAppear {
-                viewModel.getMovies()
-            }
+        }
+        .onAppear {
+            viewModel.getMovies()
         }
     }
 }

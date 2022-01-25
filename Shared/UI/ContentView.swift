@@ -3,10 +3,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            MoviesView()
-                .tabItem{
-                    Text("Browse")
-                }
+            NavigationView {
+                MoviesView()
+            }
+            .tabItem{
+                Text("Browse")
+            }
             Text("Favorites")
                 .tabItem{
                     Text("Favorites")

@@ -43,7 +43,7 @@ class MoviesViewModel: BaseViewModel {
         guard let vmItem = item as? ViewModelApiItem else { return }
         moviesApi.getMovieDetails(for: vmItem.movieShort) { movieFull, error in
             let dict = try? movieFull?.asDictionary() ?? [:]
-            item.details = (dict as? [String: String]) ?? [:]
+            item.details = dict?.mapValues{ "\($0)" }
         }
     }
     

@@ -13,12 +13,15 @@
 		2B0A0B94276B2304003B0747 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B82276B2303003B0747 /* ContentView.swift */; };
 		2B0A0B95276B2304003B0747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0A0B83276B2304003B0747 /* Assets.xcassets */; };
 		2B0A0B96276B2304003B0747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B0A0B83276B2304003B0747 /* Assets.xcassets */; };
-		2B1678E127A01FF000166913 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */; };
 		2B1678E227A01FFC00166913 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774662778D2DC00E3C699 /* MoviesView.swift */; };
 		2B1678E327A0204400166913 /* MoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774702778D87100E3C699 /* MoviesCell.swift */; };
 		2B1678E627A02F3400166913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E527A02F3400166913 /* Constants.swift */; };
 		2B1678E727A02F3400166913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E527A02F3400166913 /* Constants.swift */; };
 		2B1678E827A02F3400166913 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E527A02F3400166913 /* Constants.swift */; };
+		2B1678EA27A0508D00166913 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E927A0508D00166913 /* MovieDetailsView.swift */; };
+		2B1678EB27A0508D00166913 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E927A0508D00166913 /* MovieDetailsView.swift */; };
+		2B1678EC27A0508D00166913 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E927A0508D00166913 /* MovieDetailsView.swift */; };
+		2B1678F027A05A2300166913 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */; };
 		2B66F64D279EBF1E001ACE13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B82276B2303003B0747 /* ContentView.swift */; };
 		2B6B773727719DBF00BB26B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773627719DBF00BB26B2 /* Assets.xcassets */; };
 		2B6B773A27719DBF00BB26B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */; };
@@ -106,8 +109,9 @@
 		2B0A0B90276B2304003B0747 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		2B0A0B9F276B236C003B0747 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2B1678E527A02F3400166913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2B1678E927A0508D00166913 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
+		2B1678EF27A059AB00166913 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B6B773027719DBE00BB26B2 /* OTUS_Homework_8 (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS_Homework_8 (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B6B773227719DBE00BB26B2 /* OTUS_Homework_8App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTUS_Homework_8App.swift; sourceTree = "<group>"; };
 		2B6B773627719DBF00BB26B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B6B774027719DF400BB26B2 /* OTUS_Homework_8 (watchOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS_Homework_8 (watchOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,10 +228,18 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		2B1678EE27A059A300166913 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2B1678EF27A059AB00166913 /* ContentView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		2B6B773127719DBE00BB26B2 /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				2B6B773227719DBE00BB26B2 /* OTUS_Homework_8App.swift */,
+				2B1678EE27A059A300166913 /* UI */,
 				2B6B773627719DBF00BB26B2 /* Assets.xcassets */,
 				2B6B773827719DBF00BB26B2 /* Preview Content */,
 			);
@@ -316,6 +328,7 @@
 			children = (
 				2BC774662778D2DC00E3C699 /* MoviesView.swift */,
 				2BC774702778D87100E3C699 /* MoviesCell.swift */,
+				2B1678E927A0508D00166913 /* MovieDetailsView.swift */,
 			);
 			path = MoviesView;
 			sourceTree = "<group>";
@@ -572,6 +585,7 @@
 				2BC774672778D2DC00E3C699 /* MoviesView.swift in Sources */,
 				2B0A0B91276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77772771BAF500BB26B2 /* MoviesVM.swift in Sources */,
+				2B1678EA27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746D2778D59800E3C699 /* MockViewModel.swift in Sources */,
 				2B956B2727723976000C47CD /* Encodable.swift in Sources */,
 				2BC774712778D87100E3C699 /* MoviesCell.swift in Sources */,
@@ -588,6 +602,7 @@
 				2BC774682778D2DC00E3C699 /* MoviesView.swift in Sources */,
 				2B0A0B92276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B77782771BAF500BB26B2 /* MoviesVM.swift in Sources */,
+				2B1678EB27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746E2778D59800E3C699 /* MockViewModel.swift in Sources */,
 				2B956B2827723976000C47CD /* Encodable.swift in Sources */,
 				2BC774722778D87100E3C699 /* MoviesCell.swift in Sources */,
@@ -600,10 +615,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B1678E127A01FF000166913 /* OTUS_Homework_8App.swift in Sources */,
 				2B1678E327A0204400166913 /* MoviesCell.swift in Sources */,
 				2B66F64D279EBF1E001ACE13 /* ContentView.swift in Sources */,
 				2B6B77792771BAF500BB26B2 /* MoviesVM.swift in Sources */,
+				2B1678F027A05A2300166913 /* OTUS_Homework_8App.swift in Sources */,
+				2B1678EC27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746F2778D59800E3C699 /* MockViewModel.swift in Sources */,
 				2B956B2927723976000C47CD /* Encodable.swift in Sources */,
 				2B1678E227A01FFC00166913 /* MoviesView.swift in Sources */,
