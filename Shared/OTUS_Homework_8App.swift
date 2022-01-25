@@ -1,17 +1,12 @@
-//
-//  OTUS_Homework_8App.swift
-//  Shared
-//
-//  Created by Вячеслав Погорельский on 16.12.2021.
-//
-
 import SwiftUI
+import MoviesApi
 
 @main
 struct OTUS_Homework_8App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(MoviesViewModel(moviesApi: MoviesAPI()) as BaseViewModel)
         }
     }
 }
