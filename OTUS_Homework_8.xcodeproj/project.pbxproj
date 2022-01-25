@@ -22,7 +22,7 @@
 		2B1678EB27A0508D00166913 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E927A0508D00166913 /* MovieDetailsView.swift */; };
 		2B1678EC27A0508D00166913 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E927A0508D00166913 /* MovieDetailsView.swift */; };
 		2B1678F027A05A2300166913 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */; };
-		2B66F64D279EBF1E001ACE13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B82276B2303003B0747 /* ContentView.swift */; };
+		2B1678F127A06F6000166913 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678EF27A059AB00166913 /* ContentView.swift */; };
 		2B6B773727719DBF00BB26B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773627719DBF00BB26B2 /* Assets.xcassets */; };
 		2B6B773A27719DBF00BB26B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */; };
 		2B6B774427719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B6B774327719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -616,12 +616,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B1678E327A0204400166913 /* MoviesCell.swift in Sources */,
-				2B66F64D279EBF1E001ACE13 /* ContentView.swift in Sources */,
 				2B6B77792771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B1678F027A05A2300166913 /* OTUS_Homework_8App.swift in Sources */,
 				2B1678EC27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746F2778D59800E3C699 /* MockViewModel.swift in Sources */,
 				2B956B2927723976000C47CD /* Encodable.swift in Sources */,
+				2B1678F127A06F6000166913 /* ContentView.swift in Sources */,
 				2B1678E227A01FFC00166913 /* MoviesView.swift in Sources */,
 				2BC774642778B0B400E3C699 /* BaseVM.swift in Sources */,
 				2B1678E827A02F3400166913 /* Constants.swift in Sources */,

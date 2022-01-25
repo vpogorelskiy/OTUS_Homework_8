@@ -1,6 +1,7 @@
 
 import Foundation
 import MoviesApi
+import CoreVideo
 
 class MoviesViewModel: BaseViewModel {
     @Published var isUpdating: Bool = false
@@ -83,4 +84,8 @@ extension MoviesViewModel {
             )
         }
     }
+}
+
+extension MovieRating: CustomStringConvertible {
+    public var description: String { "\(source) : \(value)" }
 }

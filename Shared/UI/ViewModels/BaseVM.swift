@@ -29,3 +29,22 @@ class BaseViewModelItem: ObservableObject, Identifiable {
         self.favoriteChangeHandler = favoriteChangeHandler
     }
 }
+
+struct ViewModelDetailItem {
+    public var title: String
+    public var year: String?
+    public var released: String?
+    public var genre: String?
+    public var director: String?
+    public var writer: String?
+    public var actors: String?
+    public var plot: String?
+    public var language: String?
+    public var country: String?
+    public var awards: String?
+    public var posterUrl: URL?
+    public var ratings: [String]
+    public var type: String?
+    public var website: URL?
+    
+}
