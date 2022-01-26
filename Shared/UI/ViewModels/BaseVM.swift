@@ -15,7 +15,13 @@ class BaseViewModel: ObservableObject {
     func getNextIfNeeded(forItem item: BaseViewModelItem) {}
 }
 
-class BaseViewModelItem: ObservableObject, Identifiable {
+class BaseViewModelItem: ObservableObject, Identifiable, Codable {
+    enum CodingKeys: String, CodingKey {
+            case title
+            case imageUrl
+            case imdbID
+        }
+    
     let title: String
     let imageUrl: String?
     let imdbID: String

@@ -26,6 +26,9 @@
 		2B1678F327A16F9500166913 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F227A16F9500166913 /* FavoritesVM.swift */; };
 		2B1678F427A16F9500166913 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F227A16F9500166913 /* FavoritesVM.swift */; };
 		2B1678F527A16F9500166913 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F227A16F9500166913 /* FavoritesVM.swift */; };
+		2B1678F927A180FE00166913 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F827A180FE00166913 /* FavoritesStore.swift */; };
+		2B1678FA27A180FE00166913 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F827A180FE00166913 /* FavoritesStore.swift */; };
+		2B1678FB27A180FE00166913 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F827A180FE00166913 /* FavoritesStore.swift */; };
 		2B6B773727719DBF00BB26B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773627719DBF00BB26B2 /* Assets.xcassets */; };
 		2B6B773A27719DBF00BB26B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */; };
 		2B6B774427719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B6B774327719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -115,6 +118,7 @@
 		2B1678E927A0508D00166913 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		2B1678EF27A059AB00166913 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B1678F227A16F9500166913 /* FavoritesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVM.swift; sourceTree = "<group>"; };
+		2B1678F827A180FE00166913 /* FavoritesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStore.swift; sourceTree = "<group>"; };
 		2B6B773027719DBE00BB26B2 /* OTUS_Homework_8 (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS_Homework_8 (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6B773627719DBF00BB26B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		2B1678F627A1743300166913 /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
+				2B1678F827A180FE00166913 /* FavoritesStore.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -605,6 +610,7 @@
 				2B0A0B93276B2304003B0747 /* ContentView.swift in Sources */,
 				2BC774672778D2DC00E3C699 /* MoviesView.swift in Sources */,
 				2B0A0B91276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
+				2B1678F927A180FE00166913 /* FavoritesStore.swift in Sources */,
 				2B6B77772771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B1678EA27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746D2778D59800E3C699 /* MockViewModel.swift in Sources */,
@@ -623,6 +629,7 @@
 				2B0A0B94276B2304003B0747 /* ContentView.swift in Sources */,
 				2BC774682778D2DC00E3C699 /* MoviesView.swift in Sources */,
 				2B0A0B92276B2304003B0747 /* OTUS_Homework_8App.swift in Sources */,
+				2B1678FA27A180FE00166913 /* FavoritesStore.swift in Sources */,
 				2B6B77782771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B1678EB27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746E2778D59800E3C699 /* MockViewModel.swift in Sources */,
@@ -641,6 +648,7 @@
 				2B1678E327A0204400166913 /* MoviesCell.swift in Sources */,
 				2B6B77792771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B1678F027A05A2300166913 /* OTUS_Homework_8App.swift in Sources */,
+				2B1678FB27A180FE00166913 /* FavoritesStore.swift in Sources */,
 				2B1678EC27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746F2778D59800E3C699 /* MockViewModel.swift in Sources */,
 				2B956B2927723976000C47CD /* Encodable.swift in Sources */,

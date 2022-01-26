@@ -6,12 +6,16 @@ class MoviesViewModel: BaseViewModel {
     @Published var isUpdating: Bool = false
     
     private let moviesApi: MoviesAPI
+    private let favoritesStore: FavoritesStore
     
     private var lastBatchIndex = 0
     private let batchSize = 5
     
-    init(moviesApi: MoviesAPI, defaults: UserDefaults = .standard) {
+    init(moviesApi: MoviesAPI,
+         favorites: FavoritesStore = .shared,
+         defaults: UserDefaults = .standard) {
         self.moviesApi = moviesApi
+        self.favoritesStore = favorites
         super.init(defaults: defaults)
     }
     
@@ -39,7 +43,7 @@ class MoviesViewModel: BaseViewModel {
     
     func getDetails(for item: BaseViewModelItem) {
         guard let vmItem = item as? ViewModelApiItem else { return }
-        moviesApi.getMovieDetails(for: vmItem.movieShort) { movieFull, error in
+        moviesApi.getMovieDetails(forImdbID: vmItem.imdbID) { movieFull, error in
             let dict = try? movieFull?.asDictionary() ?? [:]
             item.details = dict?.mapValues{ "\($0)" }
         }
@@ -57,8 +61,7 @@ class MoviesViewModel: BaseViewModel {
     }
     
     func isFavorite(_ movie: BaseViewModelItem) -> Bool {
-        let dict: [String: Bool] = defaults.dictionary(forKey: Constants.defaultsFavoritesKey) as? [String: Bool]  ?? [:]
-        return dict[movie.imdbID] ?? false
+        return favoritesStore.favorites.firstIndex(where: { $0.imdbID == movie.imdbID }) != nil
     }
     
     func setFavorite(movie: BaseViewModelItem, isFavorite: Bool) {
@@ -70,14 +73,15 @@ class MoviesViewModel: BaseViewModel {
 
 extension MoviesViewModel {
     class ViewModelApiItem: BaseViewModelItem  {
-        var movieShort: MovieShort
-        
         init(movieShort: MovieShort) {
-            self.movieShort = movieShort
             super.init(title: movieShort.title ?? "",
                        imageUrl: movieShort.poster,
                        imdbID: movieShort.imdbID
             )
+        }
+        
+        required init(from decoder: Decoder) throws {
+            try super.init(from: decoder)
         }
     }
 }
