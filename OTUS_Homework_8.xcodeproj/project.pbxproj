@@ -23,6 +23,9 @@
 		2B1678EC27A0508D00166913 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E927A0508D00166913 /* MovieDetailsView.swift */; };
 		2B1678F027A05A2300166913 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */; };
 		2B1678F127A06F6000166913 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678EF27A059AB00166913 /* ContentView.swift */; };
+		2B1678F327A16F9500166913 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F227A16F9500166913 /* FavoritesVM.swift */; };
+		2B1678F427A16F9500166913 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F227A16F9500166913 /* FavoritesVM.swift */; };
+		2B1678F527A16F9500166913 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F227A16F9500166913 /* FavoritesVM.swift */; };
 		2B6B773727719DBF00BB26B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773627719DBF00BB26B2 /* Assets.xcassets */; };
 		2B6B773A27719DBF00BB26B2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */; };
 		2B6B774427719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B6B774327719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -111,6 +114,7 @@
 		2B1678E527A02F3400166913 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2B1678E927A0508D00166913 /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
 		2B1678EF27A059AB00166913 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2B1678F227A16F9500166913 /* FavoritesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesVM.swift; sourceTree = "<group>"; };
 		2B6B773027719DBE00BB26B2 /* OTUS_Homework_8 (tvOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS_Homework_8 (tvOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6B773627719DBF00BB26B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B6B773927719DBF00BB26B2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -223,6 +227,7 @@
 		2B1678E427A02F2500166913 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2B1678F627A1743300166913 /* Favorites */,
 				2B1678E527A02F3400166913 /* Constants.swift */,
 			);
 			path = Core;
@@ -234,6 +239,21 @@
 				2B1678EF27A059AB00166913 /* ContentView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		2B1678F627A1743300166913 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		2B1678F727A1771800166913 /* FavVM */ = {
+			isa = PBXGroup;
+			children = (
+				2B1678F227A16F9500166913 /* FavoritesVM.swift */,
+			);
+			path = FavVM;
 			sourceTree = "<group>";
 		};
 		2B6B773127719DBE00BB26B2 /* tvOS */ = {
@@ -292,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				2BC7746B2778D57200E3C699 /* MockViewModel */,
+				2B1678F727A1771800166913 /* FavVM */,
 				2BC7746A2778D56600E3C699 /* ApiViewModel */,
 				2BC774612778B0B400E3C699 /* BaseVM.swift */,
 			);
@@ -587,6 +608,7 @@
 				2B6B77772771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B1678EA27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746D2778D59800E3C699 /* MockViewModel.swift in Sources */,
+				2B1678F527A16F9500166913 /* FavoritesVM.swift in Sources */,
 				2B956B2727723976000C47CD /* Encodable.swift in Sources */,
 				2BC774712778D87100E3C699 /* MoviesCell.swift in Sources */,
 				2BC774622778B0B400E3C699 /* BaseVM.swift in Sources */,
@@ -604,6 +626,7 @@
 				2B6B77782771BAF500BB26B2 /* MoviesVM.swift in Sources */,
 				2B1678EB27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746E2778D59800E3C699 /* MockViewModel.swift in Sources */,
+				2B1678F427A16F9500166913 /* FavoritesVM.swift in Sources */,
 				2B956B2827723976000C47CD /* Encodable.swift in Sources */,
 				2BC774722778D87100E3C699 /* MoviesCell.swift in Sources */,
 				2BC774632778B0B400E3C699 /* BaseVM.swift in Sources */,
@@ -621,6 +644,7 @@
 				2B1678EC27A0508D00166913 /* MovieDetailsView.swift in Sources */,
 				2BC7746F2778D59800E3C699 /* MockViewModel.swift in Sources */,
 				2B956B2927723976000C47CD /* Encodable.swift in Sources */,
+				2B1678F327A16F9500166913 /* FavoritesVM.swift in Sources */,
 				2B1678F127A06F6000166913 /* ContentView.swift in Sources */,
 				2B1678E227A01FFC00166913 /* MoviesView.swift in Sources */,
 				2BC774642778B0B400E3C699 /* BaseVM.swift in Sources */,

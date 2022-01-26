@@ -1,21 +1,18 @@
 
 import Foundation
 import MoviesApi
-import CoreVideo
 
 class MoviesViewModel: BaseViewModel {
     @Published var isUpdating: Bool = false
     
     private let moviesApi: MoviesAPI
-    private let defaults: UserDefaults
     
     private var lastBatchIndex = 0
     private let batchSize = 5
     
     init(moviesApi: MoviesAPI, defaults: UserDefaults = .standard) {
         self.moviesApi = moviesApi
-        self.defaults = defaults
-        super.init()
+        super.init(defaults: defaults)
     }
     
     override func getMovies() {
@@ -50,20 +47,21 @@ class MoviesViewModel: BaseViewModel {
     
     private func itemsFrom(movies: [MovieShort]) -> [BaseViewModelItem] {
         movies.map { movie in
-            ViewModelApiItem(movieShort: movie,
-                                     isFavorite: self.isFavorite(movie))
-            { [weak self] fav in
-                self?.setFavorite(movie: movie, isFavorite: fav)
+            let item = ViewModelApiItem(movieShort: movie)
+            item.isFavorite = isFavorite(item)
+            item.favoriteChangeHandler = { [weak self] fav in
+                self?.setFavorite(movie: item, isFavorite: fav)
             }
+            return item
         }
     }
     
-    private func isFavorite(_ movie: MovieShort) -> Bool {
+    func isFavorite(_ movie: BaseViewModelItem) -> Bool {
         let dict: [String: Bool] = defaults.dictionary(forKey: Constants.defaultsFavoritesKey) as? [String: Bool]  ?? [:]
         return dict[movie.imdbID] ?? false
     }
     
-    private func setFavorite(movie: MovieShort, isFavorite: Bool) {
+    func setFavorite(movie: BaseViewModelItem, isFavorite: Bool) {
         var dict: [String: Bool] = defaults.dictionary(forKey: Constants.defaultsFavoritesKey) as? [String: Bool]  ?? [:]
         dict[movie.imdbID] = isFavorite
         defaults.setValue(dict, forKey: Constants.defaultsFavoritesKey)
@@ -74,13 +72,11 @@ extension MoviesViewModel {
     class ViewModelApiItem: BaseViewModelItem  {
         var movieShort: MovieShort
         
-        init(movieShort: MovieShort,isFavorite: Bool, favoriteChangeHandler: @escaping (Bool) -> Void) {
+        init(movieShort: MovieShort) {
             self.movieShort = movieShort
             super.init(title: movieShort.title ?? "",
                        imageUrl: movieShort.poster,
-                       details: nil,
-                       isFavorite: isFavorite,
-                       favoriteChangeHandler: favoriteChangeHandler
+                       imdbID: movieShort.imdbID
             )
         }
     }
