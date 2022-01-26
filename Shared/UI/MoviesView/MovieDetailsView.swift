@@ -8,6 +8,17 @@ struct MovieDetailsView: View {
         ScrollView{
             VStack {
                 if let details = movie.details {
+                    HStack {
+                        Text(movie.title)
+                        Spacer()
+                        Button {
+                            movie.isFavorite.toggle()
+                        } label: {
+                            Image(systemName: movie.isFavorite ? "suit.heart.fill" : "suit.heart")
+                        }
+                        .padding()
+                        .buttonStyle(DefaultButtonStyle())
+                    }
                     AsyncImage(url: URL(string: details["Poster"] ?? ""))
                     ForEach(Self.keysOrder, id: \.self) { key in
                         HStack {

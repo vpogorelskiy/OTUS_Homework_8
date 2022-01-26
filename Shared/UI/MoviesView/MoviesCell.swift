@@ -3,6 +3,7 @@ import SwiftUI
 
 struct MoviesCell: View {
     @ObservedObject var item: BaseViewModelItem
+    @State var isFavFocused = false
     
     var body: some View {
         HStack {
@@ -16,13 +17,6 @@ struct MoviesCell: View {
                 .frame(width: 50, height: 50)
             }
             Text(item.title)
-            //                #if os(iOS)
-            Button {
-                item.isFavorite.toggle()
-            } label: {
-                Image(systemName: item.isFavorite ? "suit.heart.fill" : "suit.heart")
-            }.focusable()
-            //                #endif
         }
     }
 }
