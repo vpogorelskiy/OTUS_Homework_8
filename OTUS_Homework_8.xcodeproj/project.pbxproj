@@ -37,8 +37,6 @@
 		2B6B774427719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B6B774327719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2B6B774927719DF600BB26B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6B774827719DF600BB26B2 /* Assets.xcassets */; };
 		2B6B774F27719DF600BB26B2 /* OTUS_Homework_8 WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B6B774E27719DF600BB26B2 /* OTUS_Homework_8 WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		2B6B775427719DF600BB26B2 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B775327719DF600BB26B2 /* OTUS_Homework_8App.swift */; };
-		2B6B775627719DF600BB26B2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B775527719DF600BB26B2 /* ContentView.swift */; };
 		2B6B775827719DF600BB26B2 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B775727719DF600BB26B2 /* NotificationController.swift */; };
 		2B6B775A27719DF600BB26B2 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B775927719DF600BB26B2 /* NotificationView.swift */; };
 		2B6B775C27719DF600BB26B2 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B775B27719DF600BB26B2 /* ComplicationController.swift */; };
@@ -52,6 +50,18 @@
 		2B956B2827723976000C47CD /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B956B2627723976000C47CD /* Encodable.swift */; };
 		2B956B2927723976000C47CD /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B956B2627723976000C47CD /* Encodable.swift */; };
 		2B956B2A27723976000C47CD /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B956B2627723976000C47CD /* Encodable.swift */; };
+		2BC34D5D27A2AB48006B6BF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B82276B2303003B0747 /* ContentView.swift */; };
+		2BC34D5E27A2AB48006B6BF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E527A02F3400166913 /* Constants.swift */; };
+		2BC34D5F27A2AB48006B6BF4 /* FavoritesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F227A16F9500166913 /* FavoritesVM.swift */; };
+		2BC34D6027A2AB48006B6BF4 /* OTUS_Homework_8App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0A0B81276B2303003B0747 /* OTUS_Homework_8App.swift */; };
+		2BC34D6127A2AB48006B6BF4 /* MoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774662778D2DC00E3C699 /* MoviesView.swift */; };
+		2BC34D6227A2AB48006B6BF4 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
+		2BC34D6327A2AB48006B6BF4 /* MoviesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774702778D87100E3C699 /* MoviesCell.swift */; };
+		2BC34D6427A2AB48006B6BF4 /* ViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678FD27A292FC00166913 /* ViewBuilder.swift */; };
+		2BC34D6527A2AB48006B6BF4 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC7746C2778D59800E3C699 /* MockViewModel.swift */; };
+		2BC34D6627A2AB48006B6BF4 /* MoviesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6B77762771BAF500BB26B2 /* MoviesVM.swift */; };
+		2BC34D6727A2AB48006B6BF4 /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678E927A0508D00166913 /* MovieDetailsView.swift */; };
+		2BC34D6827A2AB48006B6BF4 /* FavoritesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1678F827A180FE00166913 /* FavoritesStore.swift */; };
 		2BC774622778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
 		2BC774632778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
 		2BC774642778B0B400E3C699 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC774612778B0B400E3C699 /* BaseVM.swift */; };
@@ -130,8 +140,6 @@
 		2B6B774327719DF400BB26B2 /* OTUS_Homework_8 WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OTUS_Homework_8 WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6B774827719DF600BB26B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B6B774E27719DF600BB26B2 /* OTUS_Homework_8 WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OTUS_Homework_8 WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B6B775327719DF600BB26B2 /* OTUS_Homework_8App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTUS_Homework_8App.swift; sourceTree = "<group>"; };
-		2B6B775527719DF600BB26B2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2B6B775727719DF600BB26B2 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		2B6B775927719DF600BB26B2 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2B6B775B27719DF600BB26B2 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -304,8 +312,6 @@
 		2B6B775227719DF600BB26B2 /* WatchKit_Extension */ = {
 			isa = PBXGroup;
 			children = (
-				2B6B775327719DF600BB26B2 /* OTUS_Homework_8App.swift */,
-				2B6B775527719DF600BB26B2 /* ContentView.swift */,
 				2B6B775727719DF600BB26B2 /* NotificationController.swift */,
 				2B6B775927719DF600BB26B2 /* NotificationView.swift */,
 				2B6B775B27719DF600BB26B2 /* ComplicationController.swift */,
@@ -681,11 +687,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B6B775827719DF600BB26B2 /* NotificationController.swift in Sources */,
+				2BC34D6027A2AB48006B6BF4 /* OTUS_Homework_8App.swift in Sources */,
+				2BC34D6427A2AB48006B6BF4 /* ViewBuilder.swift in Sources */,
+				2BC34D6527A2AB48006B6BF4 /* MockViewModel.swift in Sources */,
+				2BC34D5F27A2AB48006B6BF4 /* FavoritesVM.swift in Sources */,
+				2BC34D6627A2AB48006B6BF4 /* MoviesVM.swift in Sources */,
+				2BC34D5D27A2AB48006B6BF4 /* ContentView.swift in Sources */,
+				2BC34D6327A2AB48006B6BF4 /* MoviesCell.swift in Sources */,
 				2B956B2A27723976000C47CD /* Encodable.swift in Sources */,
-				2B6B775627719DF600BB26B2 /* ContentView.swift in Sources */,
+				2BC34D6727A2AB48006B6BF4 /* MovieDetailsView.swift in Sources */,
 				2B6B775C27719DF600BB26B2 /* ComplicationController.swift in Sources */,
-				2B6B775427719DF600BB26B2 /* OTUS_Homework_8App.swift in Sources */,
 				2B6B775A27719DF600BB26B2 /* NotificationView.swift in Sources */,
+				2BC34D6127A2AB48006B6BF4 /* MoviesView.swift in Sources */,
+				2BC34D5E27A2AB48006B6BF4 /* Constants.swift in Sources */,
+				2BC34D6227A2AB48006B6BF4 /* BaseVM.swift in Sources */,
+				2BC34D6827A2AB48006B6BF4 /* FavoritesStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,7 +1015,7 @@
 				DEVELOPMENT_TEAM = R4G26CHU6B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "OTUS_Homework_8 WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = WatchKit_Extension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "OTUS_Homework_8 WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -1030,7 +1046,7 @@
 				DEVELOPMENT_TEAM = R4G26CHU6B;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "OTUS_Homework_8 WatchKit Extension/Info.plist";
+				INFOPLIST_FILE = WatchKit_Extension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "OTUS_Homework_8 WatchKit Extension";
 				INFOPLIST_KEY_CLKComplicationPrincipalClass = "$(PRODUCT_MODULE_NAME).ComplicationController";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";

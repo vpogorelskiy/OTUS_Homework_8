@@ -9,7 +9,6 @@ struct MovieDetailsView: View {
             VStack {
                 if let details = movie.details {
                     HStack {
-                        Text(movie.title)
                         Spacer()
                         Button {
                             movie.isFavorite.toggle()
@@ -19,12 +18,20 @@ struct MovieDetailsView: View {
                         .padding()
                         .buttonStyle(DefaultButtonStyle())
                     }
+                    
+                    Text(movie.title)
+                        .font(.largeTitle)
+                        
                     AsyncImage(url: URL(string: details["Poster"] ?? ""))
                     ForEach(Self.keysOrder, id: \.self) { key in
                         HStack {
-                            Text(key)
-                                .bold()
+                            Text(key + ":")
+                                .font(.title2)
                                 .frame(alignment: .leading)
+                            Spacer()
+                        }
+                        HStack {
+                            Spacer()
                             Text(details[key] ?? "").italic()
                         }
                         #if os(tvOS)
