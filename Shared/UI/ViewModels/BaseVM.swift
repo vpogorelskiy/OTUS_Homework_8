@@ -4,14 +4,8 @@ import MoviesApi
 class BaseViewModel: ObservableObject {
     @Published var items: [BaseViewModelItem] = []
     
-    let defaults: UserDefaults
-    
-    init(defaults: UserDefaults = .standard) {
-        self.defaults = defaults
-    }
-    
     func getMovies() {}
-    
+    func getDetails(for item: BaseViewModelItem) {}
     func getNextIfNeeded(forItem item: BaseViewModelItem) {}
 }
 

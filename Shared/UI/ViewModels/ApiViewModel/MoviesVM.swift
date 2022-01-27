@@ -12,11 +12,10 @@ class MoviesViewModel: BaseViewModel {
     private let batchSize = 5
     
     init(moviesApi: MoviesAPI,
-         favorites: FavoritesStore = .shared,
-         defaults: UserDefaults = .standard) {
+         favorites: FavoritesStore = .shared) {
         self.moviesApi = moviesApi
         self.favoritesStore = favorites
-        super.init(defaults: defaults)
+        super.init()
     }
     
     override func getMovies() {
@@ -41,7 +40,7 @@ class MoviesViewModel: BaseViewModel {
         }
     }
     
-    func getDetails(for item: BaseViewModelItem) {
+    override func getDetails(for item: BaseViewModelItem) {
         guard let vmItem = item as? ViewModelApiItem else { return }
         moviesApi.getMovieDetails(forImdbID: vmItem.imdbID) { movieFull, error in
             let dict = try? movieFull?.asDictionary() ?? [:]
@@ -54,7 +53,7 @@ class MoviesViewModel: BaseViewModel {
             let item = ViewModelApiItem(movieShort: movie)
             item.isFavorite = isFavorite(item)
             item.favoriteChangeHandler = { [weak self] fav in
-                self?.setFavorite(movie: item, isFavorite: fav)
+                self?.favoritesStore.setFavorite(movie: item)
             }
             return item
         }
@@ -62,12 +61,6 @@ class MoviesViewModel: BaseViewModel {
     
     func isFavorite(_ movie: BaseViewModelItem) -> Bool {
         return favoritesStore.favorites.firstIndex(where: { $0.imdbID == movie.imdbID }) != nil
-    }
-    
-    func setFavorite(movie: BaseViewModelItem, isFavorite: Bool) {
-        var dict: [String: Bool] = defaults.dictionary(forKey: Constants.defaultsFavoritesKey) as? [String: Bool]  ?? [:]
-        dict[movie.imdbID] = isFavorite
-        defaults.setValue(dict, forKey: Constants.defaultsFavoritesKey)
     }
 }
 

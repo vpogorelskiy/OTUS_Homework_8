@@ -1,9 +1,9 @@
 import Foundation
 
-class FavoritesStore {
+class FavoritesStore: ObservableObject {
     static let shared: FavoritesStore = .init()
     
-    public var favorites: [BaseViewModelItem] = []
+    @Published var favorites: [BaseViewModelItem] = []
     
     private let defaults: UserDefaults
     
@@ -26,6 +26,10 @@ class FavoritesStore {
     private func restoreFromDefaults() {
         if let data = defaults.value(forKey: Constants.defaultsFavoritesKey) as? Data {
             favorites = (try? JSONDecoder().decode([BaseViewModelItem].self, from: data)) ?? []
+            favorites.forEach{ item in
+                item.favoriteChangeHandler = { [weak self] _ in
+                self?.setFavorite(movie: item)
+            }}
         }
     }
     

@@ -2,7 +2,7 @@ import Foundation
 import SwiftUI
 
 struct MoviesView: View {
-    @EnvironmentObject var viewModel: MoviesViewModel
+    @EnvironmentObject var viewModel: BaseViewModel
     
     var body: some View {
         List {

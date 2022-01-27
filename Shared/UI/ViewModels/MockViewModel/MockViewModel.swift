@@ -1,7 +1,7 @@
 import Foundation
 
 class MockViewModel: BaseViewModel {
-    init() {
+    override init() {
         super.init()
         items = [MockItem(title: Optional("Final Fantasy: The Spirits Within"), year: Optional("2001"), imdbID: "tt0173840", type: Optional("movie"), poster: Optional("https://m.media-amazon.com/images/M/MV5BOGNjZmNhYTYtMDE4OS00NjViLWEwNTQtZjQzOGY1M2MyYzhjXkEyXkFqcGdeQXVyMDM5ODIyNw@@._V1_SX300.jpg")),
                  MockItem(title: Optional("Final Fantasy VII: Advent Children"), year: Optional("2005"), imdbID: "tt0385700", type: Optional("movie"), poster: Optional("https://m.media-amazon.com/images/M/MV5BNTk4NjBhZTUtN2MwMy00MzIyLWFhN2ItMmUwYzQ4MWQxODM3L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg")),

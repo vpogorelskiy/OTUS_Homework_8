@@ -1,24 +1,28 @@
 import Foundation
 import MoviesApi
+import Combine
 
 class FavoritesViewModel: BaseViewModel {
     @Published var isUpdating: Bool = false
     
     private let moviesApi: MoviesAPI
+    private let favoritesStore: FavoritesStore
     
-    private var lastBatchIndex = 0
-    private let batchSize = 5
+    private var cancellables = Set<AnyCancellable>()
     
-    init(moviesApi: MoviesAPI, defaults: UserDefaults = .standard) {
+    init(moviesApi: MoviesAPI,
+         favorites: FavoritesStore = .shared) {
         self.moviesApi = moviesApi
-        super.init(defaults: defaults)
+        self.favoritesStore = favorites
+        super.init()
+        favorites.$favorites
+            .assign(to: \.items, on: self)
+            .store(in: &cancellables)
     }
     
-    override func getMovies() {
-        
-    }
+    override func getMovies() {}
     
-    func getDetails(for item: BaseViewModelItem) {
+    override func getDetails(for item: BaseViewModelItem) {
         moviesApi.getMovieDetails(forImdbID: item.imdbID) { movieFull, error in
             let dict = try? movieFull?.asDictionary() ?? [:]
             item.details = dict?.mapValues{ "\($0)" }
