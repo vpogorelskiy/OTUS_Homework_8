@@ -1,6 +1,7 @@
-
 import Foundation
 import MoviesApi
+import Combine
+import CoreVideo
 
 class MoviesViewModel: BaseViewModel {
     @Published var isUpdating: Bool = false
@@ -11,6 +12,8 @@ class MoviesViewModel: BaseViewModel {
     private var lastBatchIndex = 0
     private let batchSize = 5
     
+    private var cancellables = Set<AnyCancellable>()
+    
     init(moviesApi: MoviesAPI,
          favorites: FavoritesStore = .shared) {
         self.moviesApi = moviesApi
@@ -18,8 +21,12 @@ class MoviesViewModel: BaseViewModel {
         super.init()
     }
     
-    override func getMovies() {
-        moviesApi.perform(query: "Fantasy", batchSize: batchSize, startIndex: 0) { [weak self] movies, error in
+    override func getMovies(_ query: String = "") {
+        guard query.count > 0 else {
+            items = []
+            return
+        }
+        moviesApi.perform(query: query, batchSize: batchSize, startIndex: 0) { [weak self] movies, error in
             print("\(Self.self).\(#function): \(movies)")
             guard let self = self else { return }
             self.items.append(contentsOf: self.itemsFrom(movies: movies) )

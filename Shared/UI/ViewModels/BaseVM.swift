@@ -1,10 +1,22 @@
 import Foundation
-import MoviesApi
+import Combine
 
 class BaseViewModel: ObservableObject {
     @Published var items: [BaseViewModelItem] = []
+    @Published var searchText: String = "" { didSet { print("\(Self.self).\(#function): \(searchText)") }}
     
-    func getMovies() {}
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        $searchText
+            .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+            .sink(receiveValue: { [weak self] value in
+                self?.getMovies(value)
+            })
+            .store(in: &cancellables)
+    }
+    
+    func getMovies(_ query: String = "") {}
     func getDetails(for item: BaseViewModelItem) {}
     func getNextIfNeeded(forItem item: BaseViewModelItem) {}
 }

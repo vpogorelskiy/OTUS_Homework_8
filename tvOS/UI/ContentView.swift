@@ -1,20 +1,17 @@
 import SwiftUI
+import MoviesApi
 
 struct ContentView: View {
     var body: some View {
         NavigationView {
             TabView {
-                MoviesView()
-                .tabItem{
-                    Text("Browse")
-                }
-                Text("Favorites")
+                ViewBuilder.browseMoviesView
+                    .tabItem{
+                        Text("Browse")
+                    }
+                ViewBuilder.favoriteMoviesView
                     .tabItem{
                         Text("Favorites")
-                    }
-                Text("Settings")
-                    .tabItem{
-                        Text("Settings")
                     }
             }
         }

@@ -5,6 +5,8 @@ import Combine
 class FavoritesViewModel: BaseViewModel {
     @Published var isUpdating: Bool = false
     
+    private var _items: [BaseViewModelItem] = []
+    
     private let moviesApi: MoviesAPI
     private let favoritesStore: FavoritesStore
     
@@ -15,14 +17,27 @@ class FavoritesViewModel: BaseViewModel {
         self.moviesApi = moviesApi
         self.favoritesStore = favorites
         super.init()
+        
         favorites.$favorites
-            .assign(to: \.items, on: self)
+            .sink(receiveValue: { [weak self] newItems in
+                self?._items = newItems
+                self?.items = self?.filteredItems ?? []
+            })
             .store(in: &cancellables)
     }
     
-    override func getMovies() {}
+    private var filteredItems: [BaseViewModelItem] { return searchText.count > 0 ? _items.filter{ $0.title.contains(searchText) } : _items } 
+    
+    override func getMovies(_ query: String = "") {
+        guard query.count > 0 else {
+            items = favoritesStore.favorites
+            return
+        }
+        items = filteredItems
+    }
     
     override func getDetails(for item: BaseViewModelItem) {
+        guard item.details == nil else { return }
         moviesApi.getMovieDetails(forImdbID: item.imdbID) { movieFull, error in
             let dict = try? movieFull?.asDictionary() ?? [:]
             item.details = dict?.mapValues{ "\($0)" }

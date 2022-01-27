@@ -6,6 +6,7 @@ struct MoviesView: View {
     
     var body: some View {
         List {
+            TextField("Search movies:", text: $viewModel.searchText)
             ForEach(viewModel.items) { item in
                 NavigationLink {
                     MovieDetailsView(movie: item)
@@ -20,9 +21,9 @@ struct MoviesView: View {
                 }
             }
         }
-        .onAppear {
-            viewModel.getMovies()
-        }
+//        .onAppear {
+//            viewModel.getMovies()
+//        }
     }
 }
 
