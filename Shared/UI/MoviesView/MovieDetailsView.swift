@@ -26,7 +26,10 @@ struct MovieDetailsView: View {
                                 .bold()
                                 .frame(alignment: .leading)
                             Text(details[key] ?? "").italic()
-                        }.focusable()
+                        }
+                        #if os(tvOS)
+                        .focusable()
+                        #endif
                     }
                 } else {
                     Text("No movie details")
