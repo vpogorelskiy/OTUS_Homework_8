@@ -7,10 +7,12 @@ struct ContentView: View {
             TabView {
                 ViewBuilder.browseMoviesView
                     .tabItem{
+                        Image(systemName: "magnifyingglass")
                         Text("Browse")
                     }
                 ViewBuilder.favoriteMoviesView
                     .tabItem{
+                        Image(systemName: "star.fill")
                         Text("Favorites")
                     }
             }

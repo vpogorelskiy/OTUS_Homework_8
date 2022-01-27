@@ -27,9 +27,9 @@ class MoviesViewModel: BaseViewModel {
             return
         }
         moviesApi.perform(query: query, batchSize: batchSize, startIndex: 0) { [weak self] movies, error in
-            print("\(Self.self).\(#function): \(movies)")
+            print("\(Self.self).\(#function): \(movies); Error:\(error)")
             guard let self = self else { return }
-            self.items.append(contentsOf: self.itemsFrom(movies: movies) )
+            self.items = self.itemsFrom(movies: movies)
         }
     }
     
