@@ -1,15 +1,5 @@
-# OTUS_Homework_8
+# Multiplatform
 
-Приложение работающее на всех платформах Apple
+Application working on all Apple platforms
 
-Цель:
-Прокачать навык apple-мультиплатформенной разработки
-
-Сделать приложение(или ваше проектное или предыдущих занятий) работающее на watchOS, iOS, tvOS
-На каждом экране показывать как минимум заголовок и тестовые данные (+ можно картинку) 3: Использовать общую бизнес-логиуку Shared и загрузку данных с публичного апи https://github.com/public-apis/public-apis
-Критерии оценки:
-Факт сдачи дз - 4 балла
-tvOS - 2 балла
-watchOS - 2 балла
-Сomplications WatchOS - 1 балл
-Пуши(тестовые tvOS или watchOS) - 1 балл
+Aim is to make an application working on watchOS, iOS, tvOS
